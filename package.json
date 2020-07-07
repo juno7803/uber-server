@@ -1,0 +1,24 @@
+{
+  "name": "uber-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/juno7803/uber-server.git",
+  "author": "junolee <junolee7803@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/helmet": "^0.0.47",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^14.0.18",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.6"
+  },
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}
