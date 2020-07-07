@@ -6,8 +6,7 @@ import * as logger from "morgan";
 class App{
     public app: GraphQLServer;
     constructor(){
-        this.app = new GraphQLServer({
-        });
+        this.app = new GraphQLServer({});
         this.middlewares();
     }
     // 바로 시작되는 곳
