@@ -1,5 +1,7 @@
 import {Options} from 'graphql-yoga'; // Option 타입을 import 함!
+import {createConnection}from "typeorm";
 import app from './app';
+import connectionOptions from './ormConfig';
 
 // type 정의
 const PORT : number | string = process.env.PORT || 4000;
@@ -14,7 +16,11 @@ const appOptions : Options = {
 
 const handleAppStart = () => console.log(`Listening on port ${PORT}`);
 
-app.start(appOptions,handleAppStart);
+createConnection(connectionOptions).then(() => {
+    app.start(appOptions, handleAppStart);
+  });
+// #2.9 orm은 ormConfig에서 설정한 옵션들로 db와 앱을 연결해준다.
+
 // options 파라미터와 콜백 파라미터를 가진다!
 
 // graphql-yoga server
