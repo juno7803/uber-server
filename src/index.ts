@@ -1,3 +1,5 @@
+import 'dotenv/config';
+// 강의에서 import dotenv from 'dotenv'; 안됨..
 import {Options} from 'graphql-yoga'; // Option 타입을 import 함!
 import {createConnection}from "typeorm";
 import app from './app';
