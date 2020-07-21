@@ -15,7 +15,11 @@ type User{
     isDriving: Boolean!
     isRiding: Boolean!
     isTaken: Boolean!
-    lastLng: Float
+    lastLng: Float 
     lastLat: Float
     lastOrientation: Float
+}
+
+type Query{
+    user: User
 }
