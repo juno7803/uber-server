@@ -1,12 +1,18 @@
+import bcrypt from "bcrypt";
 import { IsEmail } from "class-validator";
 import {
-  Entity,
+  BeforeInsert,
+  BeforeUpdate,
   BaseEntity,
   Column,
-  PrimaryGeneratedColumn,
   CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
+
+const BCRYPT_ROUND = 10;
+// 우리가 설치한 bcrypt를 몇번 수행할 것인가에 대한 상수 설정
 
 @Entity()
 class User extends BaseEntity {
@@ -62,6 +68,24 @@ class User extends BaseEntity {
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
+
+  
+  @BeforeInsert()
+  @BeforeUpdate()
+  // @BeforeInsert와 @BeforeUpdate는 우리가 save 하거나 update 하기 전에 호출되는 메소드
+  async savePassword() :Promise<void>{
+      if(this.password){
+          const hashedPassword = await this.hashPassword(this.password);
+          // string으로 저장한 pw를 hashPassword 함수를 await 함으로써 해싱하여 저장한다.
+          this.password = hashedPassword;
+          // 여기서 entity에 저장할 password를 해싱한 버전으로 바꾼다.
+        }
+    }
+    
+    private hashPassword(password:string):Promise<string> {
+        // :Promise<string> 이 Promise는 결국 string을 줄 것 이라는 뜻
+        return bcrypt.hash(password, BCRYPT_ROUND);
+    }
 }
 
 export default User;
