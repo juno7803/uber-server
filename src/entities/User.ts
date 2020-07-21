@@ -48,19 +48,19 @@ class User extends BaseEntity {
 
   
   @Column({ type: "boolean", default: false })
-  isDriving;
+  isDriving: boolean;
   @Column({ type: "boolean", default: false })
-  isRiding;
+  isRiding: boolean;
   @Column({ type: "boolean", default: false })
-  isTaken;
+  isTaken: boolean;
   
   
   @Column({ type: "double precision", default: 0 })
-  lastLng;
+  lastLng: number;
   @Column({ type: "double precision", default: 0 })
-  lastLat;
+  lastLat: number;
   @Column({ type: "double precision", default: 0 })
-  lastOrientation;
+  lastOrientation: number;
   
   @CreateDateColumn() createdAt: string;
   @UpdateDateColumn() updatedAt: string;
