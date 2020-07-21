@@ -69,6 +69,9 @@ class User extends BaseEntity {
     return `${this.firstName} ${this.lastName}`;
   }
 
+  public comparePassword(password: string):Promise<boolean>{
+    return bcrypt.compare(password,this.password);
+  }
   
   @BeforeInsert()
   @BeforeUpdate()
@@ -76,14 +79,11 @@ class User extends BaseEntity {
   async savePassword() :Promise<void>{
       if(this.password){
           const hashedPassword = await this.hashPassword(this.password);
-          // string으로 저장한 pw를 hashPassword 함수를 await 함으로써 해싱하여 저장한다.
           this.password = hashedPassword;
-          // 여기서 entity에 저장할 password를 해싱한 버전으로 바꾼다.
         }
     }
     
     private hashPassword(password:string):Promise<string> {
-        // :Promise<string> 이 Promise는 결국 string을 줄 것 이라는 뜻
         return bcrypt.hash(password, BCRYPT_ROUND);
     }
 }
