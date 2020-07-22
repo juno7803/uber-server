@@ -8,6 +8,8 @@
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/node": "^14.0.18",
+    "babel-runtime": "^6.26.0",
+    "dotenv": "^8.2.0",
     "gql-merge": "^0.0.6",
     "graphql-to-typescript": "^0.1.2",
     "nodemon": "^2.0.4",
@@ -16,6 +18,7 @@
     "typescript": "^3.9.6"
   },
   "scripts": {
+    "predev": "yarn run types",
     "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
     "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
     "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts"
@@ -24,7 +27,6 @@
     "bcrypt": "^5.0.0",
     "class-validator": "^0.12.2",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
     "graphql-tools": "^6.0.12",
     "graphql-yoga": "^1.18.3",
     "helmet": "^3.23.3",
