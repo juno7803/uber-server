@@ -4,6 +4,7 @@ type Verification{
     payload: String!
     key: String!
     used: Boolean!
+    user: user!
     createdAt: String!
     updatedAt: String!
 }
