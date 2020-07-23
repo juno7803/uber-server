@@ -1,0 +1,15 @@
+type Ride{
+    id: Int!
+    status: String! # 요청 취소 끝남 등의 상태
+    pickUpAddress: String!
+    pickUpLat: Float!
+    pickUpLng: Float!
+    dropOffAddress: String!
+    dropOffLat: Float!
+    dropOffLng: Float!
+    price: Float!
+    distance: String!
+    duration: String!
+    createdAt: String!
+    updatedAt: String
+}
