@@ -8,7 +8,7 @@ NodeJS
 
 ### Publice Resolvers:
 
-- [ ] Sign In / Sign Up with Facbook
+- [x] Sign In / Sign Up with Facbook
 - [ ] Sign In with Email
 - [ ] Start Phone Number Verification
 - [ ] Compelete Phone Number Verification
@@ -17,6 +17,8 @@ NodeJS
 
 ### Private Resolvers:
 
+- [ ] Generate JWT
+- [ ] Verify JWT
 - [ ] Verify Email
 - [ ] Get My Profile
 - [ ] Update My Profile
