@@ -9,7 +9,7 @@ NodeJS
 ### Publice Resolvers:
 
 - [x] Sign In / Sign Up with Facbook
-- [ ] Sign In with Email
+- [x] Sign In with Email
 - [ ] Start Phone Number Verification
 - [ ] Compelete Phone Number Verification
 - [ ] Sign Up with Email
