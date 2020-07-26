@@ -1,11 +1,9 @@
 import {
     BaseEntity,
-    Column,
     CreateDateColumn,
     Entity, 
     PrimaryGeneratedColumn,
     UpdateDateColumn,
-    ManyToOne,
     OneToMany,
 } from "typeorm";
 
