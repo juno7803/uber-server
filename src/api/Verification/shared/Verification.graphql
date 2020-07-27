@@ -3,7 +3,6 @@ type Verification{
     target: String! # 이메일 인증 or 핸드폰 인증 등
     payload: String!
     key: String!
-    used: Boolean!
     createdAt: String!
     updatedAt: String!
 }
