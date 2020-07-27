@@ -10,7 +10,7 @@ NodeJS
 
 - [x] Sign In / Sign Up with Facbook
 - [x] Sign In with Email
-- [ ] Start Phone Number Verification
+- [x] Start Phone Number Verification
 - [ ] Compelete Phone Number Verification
 - [ ] Sign Up with Email
 --- 
