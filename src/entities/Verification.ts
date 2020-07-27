@@ -5,7 +5,6 @@ import {
     CreateDateColumn,
     Entity, 
     PrimaryGeneratedColumn,
-    ManyToOne, 
     UpdateDateColumn,
 } from "typeorm";
 import { verificationTarget } from "src/types/types";
