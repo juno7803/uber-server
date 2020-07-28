@@ -21,7 +21,6 @@ const resolvers: Resolvers = {
               payload: phoneNumber,
               target: "PHONE"
             }).save(); // key는 자동으로 생성됨
-            console.log(newVerification);
             // to do: send sms
             await sendVerificationSMS(newVerification.payload,newVerification.key);
             return{

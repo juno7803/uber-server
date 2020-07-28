@@ -4,6 +4,7 @@ import {
   EmailSignUpResponse,
 } from "../../../types/graph";
 import User from "../../../entities/User";
+import createJWT from "../../../utils/createJWT";
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -21,12 +22,13 @@ const resolvers: Resolvers = {
                 token: null
             };
         } else{
-            await User.create({...args}).save();
+            const newUser = await User.create({...args}).save();
+            const token = createJWT(newUser.id);
             // for jwt token
             return{
                 ok: true,
                 error: null,
-                token: "Comming Soon!"
+                token
             }
         }
       }catch(error){

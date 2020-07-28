@@ -4,6 +4,7 @@ import {
   EmailSignInResponse,
 } from "../../../types/graph";
 import User from "../../../entities/User";
+import createJWT from "../../../utils/createJWT";
 
 // 내가 얻은 이메일로 사용자 찾기
 const resolvers:Resolvers = {   
@@ -23,10 +24,11 @@ const resolvers:Resolvers = {
                 // password compare codes
                 const checkPassword = await user.comparePassword(password);
                 if(checkPassword){
+                    const token = createJWT(user.id);
                     return{
                         ok:true,
                         error: null,
-                        token:"Comming soon"
+                        token
                     }
                 }else{
                     return{
