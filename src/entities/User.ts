@@ -37,7 +37,7 @@ class User extends BaseEntity {
   lastName: string;
 
   @Column({ type: "int", nullable: true })
-  age: string;
+  age: number;
 
   @Column({ type: "text", nullable: true })
   password: string;

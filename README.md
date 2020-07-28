@@ -11,14 +11,17 @@ NodeJS
 - [x] Sign In / Sign Up with Facbook
 - [x] Sign In with Email
 - [x] Start Phone Number Verification
-- [ ] Compelete Phone Number Verification
+- [x] Compelete Phone Number Verification
 - [ ] Sign Up with Email
 --- 
 
-### Private Resolvers:
+### Authentication:
 
 - [ ] Generate JWT
 - [ ] Verify JWT
+
+### Private Resolvers:
+
 - [ ] Verify Email
 - [ ] Get My Profile
 - [ ] Update My Profile
