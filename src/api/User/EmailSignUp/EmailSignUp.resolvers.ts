@@ -21,7 +21,7 @@ const resolvers: Resolvers = {
                 token: null
             };
         } else{
-            const newUser = await User.create({...args}).save();
+            await User.create({...args}).save();
             // for jwt token
             return{
                 ok: true,
