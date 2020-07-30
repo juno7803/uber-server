@@ -1,6 +1,6 @@
 type Ride{
     id: Int!
-    status: String! # 요청 취소 끝남 등의 상태
+    status: String! 
     pickUpAddress: String!
     pickUpLat: Float!
     pickUpLng: Float!
