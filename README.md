@@ -1,8 +1,9 @@
 # Uber-server
-Uber Clone Course on Nomad Academy
-GrapQL
-Typescript
-NodeJS
+Uber Clone Course on Nomad Academy    
+GraphQL  
+PostgreSQL  
+Typescript(TypeORM)  
+NodeJS Express  
 
 ## Resolvers
 
