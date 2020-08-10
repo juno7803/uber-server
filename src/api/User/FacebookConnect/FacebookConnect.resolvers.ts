@@ -6,7 +6,6 @@ import {
 import { Resolvers } from "src/types/resolvers";
 import createJWT from "../../../utils/createJWT";
 // 파라미터 중 parent는 쓰지 않을 것 이므로, 상관없다 는 의미의 "_" 를 파라미터에 적은 것임
-//
 const resolvers: Resolvers = {
   Mutation: {
     FacebookConnect: async (
