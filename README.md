@@ -23,8 +23,8 @@ NodeJS Express
 
 ### Private Resolvers:
 
-- [x] Verify Email
-- [ ] Get My Profile
+- [x] Get My Profile
+- [ ] Verify Email
 - [ ] Update My Profile
 - [ ] Toggle Driving Mode
 - [ ] Report Location / Orientation
