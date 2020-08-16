@@ -24,9 +24,9 @@ const resolvers: Resolvers = {
             // to do: send sms
             await sendVerificationSMS(newVerification.payload,newVerification.key);
             return{
-              ok: true,
-              error: null
-            }
+              ok:true,
+              error:null,
+            };
         }catch(error){
             return{
                 ok: false,

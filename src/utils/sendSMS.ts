@@ -6,7 +6,7 @@ const twilioClient = Twilio(
 );
 
 // 1. 어떤 번호로든 어떤 본문과 함께 텍스트 메시지를 보내는 함수
-export const sendSMS = (to:string, body: string) => {
+const sendSMS = (to:string, body: string) => {
     return twilioClient.messages.create({
         body,
         to,
