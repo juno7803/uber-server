@@ -9,12 +9,6 @@ import createJWT from "../../../utils/createJWT";
 // add
 
 const resolvers: Resolvers = {
-  Query: {
-    user: (parent,args,context)=>{
-      console.log(context.req);
-      return "";
-    }
-  },  
   Mutation: {
     FacebookConnect: async (
       _,
