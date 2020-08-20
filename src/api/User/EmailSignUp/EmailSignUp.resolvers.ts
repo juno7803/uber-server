@@ -7,7 +7,7 @@ import User from "../../../entities/User";
 import createJWT from "../../../utils/createJWT";
 import Verification from "../../../entities/Verification";
 import { sendVerificationEmail } from "../../../utils/sendEmail";
-// add
+
 const resolvers: Resolvers = {
   Mutation: {
     EmailSignUp: async (
