@@ -1,4 +1,4 @@
-import { Resolvers } from "src/types/resolvers";
+import { Resolvers } from "../../../types/resolvers";
 import {
   CompletePhoneVerificationMutationArgs,
   CompletePhoneVerificationResponse,
