@@ -1,7 +1,7 @@
 import 'dotenv/config';
 // 강의에서 import dotenv from 'dotenv'; 안됨..
 import {Options} from 'graphql-yoga'; // Option 타입을 import 함!
-import {createConnection}from "typeorm";
+import {createConnection}from "typeorm:";
 import app from './app';
 import connectionOptions from './ormConfig';
 
@@ -26,3 +26,4 @@ createConnection(connectionOptions).then(() => {
 // options 파라미터와 콜백 파라미터를 가진다!
 
 // graphql-yoga server server
+// add
