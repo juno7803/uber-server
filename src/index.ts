@@ -26,4 +26,3 @@ createConnection(connectionOptions).then(() => {
 // options 파라미터와 콜백 파라미터를 가진다!
 
 // graphql-yoga server server
-// add
