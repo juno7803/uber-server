@@ -15,3 +15,4 @@ const privateResolver = (resolverFunction) => async (
 };
 
 export default privateResolver;
+// psql setting
