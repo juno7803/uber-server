@@ -9,5 +9,6 @@ type Mutation{
         email: String
         password:String
         profilePhoto: String
-        age: Int):UpdateMyProfileResponse!
+        age: Int
+    ):UpdateMyProfileResponse!
 }
