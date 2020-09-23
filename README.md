@@ -27,8 +27,8 @@ renew to uber eats
 - [x] Get My Profile
 - [x] Request Email Verification
 - [x] Complete Email Veirication
-- [ ] Update My Profile
-- [ ] Toggle Driving Mode
+- [x] Update My Profile
+- [x] Toggle Driving Mode
 - [ ] Report Location / Orientation
 - [ ] Add Place
 - [ ] Edit Place
