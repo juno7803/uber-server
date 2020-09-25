@@ -14,6 +14,7 @@ import {
 } from "typeorm";
 import Chat from "./Chat";
 import Message from "./Message";
+import Place from "./Place";
 import Ride from "./Ride";
 
 const BCRYPT_ROUND = 10;
@@ -80,6 +81,9 @@ class User extends BaseEntity {
 
   @OneToMany(type => Ride, ride => ride.driver)
   ridesAsDriver: Ride[];
+
+  @ManyToOne(type => Place, place => place.user)
+  places: User;
 
   @CreateDateColumn() createdAt: string;
   @UpdateDateColumn() updatedAt: string;
