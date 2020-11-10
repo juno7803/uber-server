@@ -47,3 +47,5 @@ renew to uber eats
 
 - [ ] Get Ride History
 - [ ] See Ride Detail
+
+It will update to uber eats
