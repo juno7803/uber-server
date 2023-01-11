@@ -28,7 +28,7 @@
   "dependencies": {
     "@types/mailgun-js": "^0.22.10",
     "bcrypt": "^5.0.0",
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.14.0",
     "cors": "^2.8.5",
     "graphql-tools": "^6.0.12",
     "graphql-yoga": "^1.18.3",
